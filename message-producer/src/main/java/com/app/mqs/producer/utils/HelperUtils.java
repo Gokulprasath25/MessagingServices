@@ -16,6 +16,7 @@ public class HelperUtils {
 		try {
 			jsonStr = objectMapper.writeValueAsString(dto);
 		}catch (Exception ex) {
+			log.error("Exception while Converting Dto to Json String -> "+ ex.getMessage());
 			ex.printStackTrace();
 		}
 		return jsonStr;
